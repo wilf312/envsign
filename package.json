@@ -24,10 +24,10 @@
   "bugs": {
     "url": "https://github.com/wilf312/envsign/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.0",
     "cross-env": "^5.2.0",
+    "lerna": "^2.11.0",
     "prettier": "^1.13.7",
     "ts-loader": "^4.4.2",
     "tslint-config-prettier": "^1.13.0",
