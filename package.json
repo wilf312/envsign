@@ -26,8 +26,12 @@
   "bugs": {
     "url": "https://github.com/wilf312/envsign/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "cross-env": "^5.2.0",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
   }
 }
