@@ -11,9 +11,7 @@
     "environment"
   ],
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production --watch",
-    "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "lint": "prettier src/*.ts !**/node_modules/** !./node_modules/** --write",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags"
