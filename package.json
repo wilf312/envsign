@@ -11,7 +11,8 @@
     "environment"
   ],
   "scripts": {
-    "build": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production --watch",
+    "dev": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production --watch",
+    "build": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production",
     "lint": "prettier src/*.ts !**/node_modules/** !./node_modules/** --write",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags"
