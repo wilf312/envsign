@@ -42,12 +42,16 @@
     "local": {
       "color": "white",
       "bodyClass": "local",
-      "text": "Local"
+      "text": "Local",
+      "vertical": "top",
+      "horizontal": "right"
     },
     "dev1": {
       "color": "#fd7b7b",
       "bodyClass": "dev",
-      "text": "Development"
+      "text": "Development",
+      "vertical": "top",
+      "horizontal": "right"
     }
   }
 }

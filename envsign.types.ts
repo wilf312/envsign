@@ -3,6 +3,8 @@ export interface Setting {
     bodyClass?: string
     text?: string
     position?: string
+    vertical?: string
+    horizontal?: string
 }
 
 export interface SettingWithEnvName extends Setting {
