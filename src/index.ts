@@ -22,17 +22,17 @@ const createConfig = (
         return settings[0]
     }
     }
-    
+
 
 export const signEnv = (envSignSettings = ENV_SIGN_SETTING, envName = ENV_SIGN) => {
     console.log(`ENV_SIGN => `, ENV_SIGN)
     console.log(`ENV_SIGN_SETTING => `, ENV_SIGN_SETTING)
     console.log(`ENV_SIGN_SETTING => `, JSON.stringify(ENV_SIGN_SETTING))
-    
+
     const config = createConfig()
     const dom = document.querySelector('body')
     const div = document.createElement('div')
-    
+
     Object.keys(config).forEach(key => {
       if (key === 'bodyClass') {
         dom.classList.add(config.bodyClass)
@@ -56,7 +56,7 @@ export const signEnv = (envSignSettings = ENV_SIGN_SETTING, envName = ENV_SIGN) 
         }
       }
     })
-    
+
     dom.appendChild(div)
     div.addEventListener('click', function() {
       this.parentNode.removeChild(this)
