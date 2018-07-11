@@ -1,1 +1,1 @@
-web: pwd && node app.js
+web: npm start
