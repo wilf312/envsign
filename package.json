@@ -17,7 +17,7 @@
     "lint": "prettier src/*.ts !**/node_modules/** !./node_modules/** --write",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
-    "preinstall": "npm install -g http-server",
+    "preinstall": "npm install -g typescript",
     "postinstall": "echo \"echo success\""
   },
   "repository": {
