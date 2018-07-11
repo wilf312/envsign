@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "start": "tsc && node app/app.js",
-    "dev": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production --watch",
+    "dev": "tsc && PORT=9999  node app/app.js",
     "build": "tsc",
     "lint": "prettier src/*.ts !**/node_modules/** !./node_modules/** --write",
     "version": "npm run build && git add -A dist",
@@ -28,11 +28,13 @@
     "url": "https://github.com/wilf312/envsign/issues"
   },
   "devDependencies": {
+    "@types/express": "^4.16.0",
     "typescript": "^2.9.2"
   },
   "global": [],
   "dependencies": {
-    "@types/node": "^10.5.2"
+    "@types/node": "^10.5.2",
+    "express": "^4.16.3"
   },
   "engines": {
     "node": "v10.5.0",
