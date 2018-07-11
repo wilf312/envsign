@@ -7,7 +7,7 @@ class Main {
         (request: http.IncomingMessage, response: http.ServerResponse) =>
             this.requestHandler(request, response))
     // サーバーを起動してリクエストを待ち受け状態にする
-    server.listen('5000')
+    server.listen(process.env.PORT || 8000)
   }
 
   /*
