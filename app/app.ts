@@ -6,11 +6,15 @@ const app: express.Application = express()
 app.set('view engine', 'ejs')
 
 app.all('*', (req: express.Request, res: express.Response) => {
+  const {
+    text = 'aaa',
+    color = 'yellow'
+  } = req.query
   res
     .header('content-type', 'text/javascript; charset=UTF-8')
     .render(path.resolve('app/response.ejs'), {
-      text: 'aaaa',
-      color: '#00d'
+      text,
+      color
   })
 })
 
