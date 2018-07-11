@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "module": "commonjs",
+    "target": "es2018",
     "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "allowJs": true
-  }
+    "types": ["node"]
+  },
+  "exclude": ["node_modules"]
 }
