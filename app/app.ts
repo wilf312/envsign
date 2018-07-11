@@ -14,7 +14,7 @@ app.all('*', (req: express.Request, res: express.Response) => {
     .header('content-type', 'text/javascript; charset=UTF-8')
     .render(path.resolve('app/response.ejs'), {
       text,
-      color
+      color: color === 'transparent' ? color: `#${color}`
   })
 })
 
