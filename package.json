@@ -11,12 +11,14 @@
     "environment"
   ],
   "scripts": {
-    "start": "tsc && node app.js",
+    "start": "http-server app.js",
     "dev": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production --watch",
     "build": "tsc",
     "lint": "prettier src/*.ts !**/node_modules/** !./node_modules/** --write",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "build"
   },
   "repository": {
     "type": "git",
