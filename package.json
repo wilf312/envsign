@@ -18,7 +18,7 @@
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
     "preinstall": "npm install -g http-server",
-    "postinstall": "build"
+    "postinstall": "echo \"echo success\""
   },
   "repository": {
     "type": "git",
