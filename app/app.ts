@@ -7,8 +7,8 @@ app.set('view engine', 'ejs')
 
 app.all('*', (req: express.Request, res: express.Response) => {
   const {
-    text = 'aaa',
-    color = 'yellow'
+    text = '',
+    color = 'transparent'
   } = req.query
   res
     .header('content-type', 'text/javascript; charset=UTF-8')
