@@ -11,7 +11,7 @@
     "environment"
   ],
   "scripts": {
-    "start": "tsc && node app.js",
+    "start": "tsc && node app/app.js",
     "dev": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production --watch",
     "build": "tsc",
     "lint": "prettier src/*.ts !**/node_modules/** !./node_modules/** --write",
