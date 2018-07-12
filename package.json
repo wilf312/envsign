@@ -11,11 +11,14 @@
     "environment"
   ],
   "scripts": {
-    "dev": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production --watch",
-    "build": "cross-env ENV_SIGN=dev1 NODE_ENV=production webpack --progress --hide-modules --mode production",
+    "start": "tsc && node app/app.js",
+    "dev": "tsc && PORT=9999  node app/app.js",
+    "build": "tsc",
     "lint": "prettier src/*.ts !**/node_modules/** !./node_modules/** --write",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "preinstall": "npm install -g typescript",
+    "postinstall": "echo \"echo success\""
   },
   "repository": {
     "type": "git",
@@ -25,32 +28,18 @@
     "url": "https://github.com/wilf312/envsign/issues"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^5.2.0",
-    "cross-env": "^5.2.0",
-    "prettier": "^1.13.7",
-    "ts-loader": "^4.4.2",
-    "tslint-config-prettier": "^1.13.0",
-    "typescript": "^2.9.2",
-    "webpack": "^4.14.0",
-    "webpack-cli": "^3.0.8"
+    "@types/express": "^4.16.0",
+    "typescript": "^2.9.2"
   },
-  "global": [
-    "ENV_SIGN"
-  ],
-  "envsign": {
-    "local": {
-      "color": "white",
-      "bodyClass": "local",
-      "text": "Local",
-      "vertical": "top",
-      "horizontal": "right"
-    },
-    "dev1": {
-      "color": "#fd7b7b",
-      "bodyClass": "dev",
-      "text": "Development",
-      "vertical": "top",
-      "horizontal": "right"
-    }
+  "global": [],
+  "dependencies": {
+    "@types/ejs": "^2.6.0",
+    "@types/node": "^10.5.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  },
+  "engines": {
+    "node": "v10.5.0",
+    "npm": "6.1.0"
   }
 }
